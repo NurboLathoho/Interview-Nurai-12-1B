@@ -17,19 +17,19 @@ func()
 
 # 2
 import random
+def func():
+    language = ["Python", "Java", "Kotlin", "JavaScript", "C#","RUBY"]
+    word_random = random.choice(language)
 
-language = ["Python", "Java", "Kotlin", "JavaScript", "C#","RUBY"]
+    with open('result.txt', 'w') as write_file:
+        write_file.write(word_random)
+    with open('result.txt', 'r') as write_read:
+       write_read.read()
 
-word_random = random.choice(language)
-
-with open('result.txt', 'w') as write_file:
-    write_file.write(word_random)
-with open('result.txt', 'r') as write_read:
-    write_read.read()
-
+func() 
 # 3
-
 names = ["azat", "zina", "kuma", "anna", "sas"]
 name_pol = list(filter(lambda x: x == x[::-1], names))
 print(name_pol)
+
 
